@@ -1,7 +1,7 @@
 <template>
   <div class="container mt-4">
       <my-header></my-header>
-    <h1>Liste des Véhicules dans votre concession</h1>
+    
     <table class="table table-bordered mt-4">
       <thead class="thead-light">
         <tr >
@@ -61,23 +61,25 @@
     <div class="col-3 offset-9">
       <div class="input-group input-group-lg mb-3">
         <div class="input-group-prepend">
-          <span id="total" class="input-group-text">Total :   </span><input class="form-control form-control-sm text-right" disabled :value="this.total | money">
+          <span id="total" class="input-group-text">TOTAL :   </span><input class="form-control form-control-sm text-right" disabled :value="this.total | money">
         </div>
         
       </div>
 
     </div>
-
+<my-footer></my-footer>
   </div>
 </template>
 
 <script>
 import Header from '@/components/Header.vue'
+import Footer from '@/components/Footer.vue'
 
 export default {
   name: 'ListeVoiture',
   components:{
-         'my-header':Header
+         'my-header':Header,
+         'my-footer':Footer
      },
   data() {
     return {
